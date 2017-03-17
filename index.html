@@ -12,6 +12,7 @@
     integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
     crossorigin="anonymous"></script>
 
+
 </head>
 
 <body>
@@ -74,11 +75,11 @@
 
               game.input.onDown.add(launcher, this);
 
-              score1 = game.add.text(200,100,'0',{font: "64px Gabriella", fill: '#010101',
+              score1 = game.add.text(200,100,'0',{font: "64px Gabriella", fill: '#385EA3',
               align: 'center'
               });
 
-              score2 = game.add.text(game.world.width -200,100,'0',{font: "64px Gabriella", fill: '#010101',
+              score2 = game.add.text(game.world.width -200,100,'0',{font: "64px Gabriella", fill: '#385EA3',
               align: 'center'
               });
 
@@ -121,13 +122,13 @@
 
 
           function win(score1keeper, score2keeper) {
-              if (score1keeper === 1) {
+              if (score1keeper === 3) {
               var winningComputer = $('<div></div>');
               var createImage = document.createElement('img');
               var getImg = $(createImage).attr('src', pikachu);
               $(winningComputer).append(getImg);
               var winningComputerHeader = $('<h1>Better luck next time!</h1>');
-              winningComputer.css('background-color', 'lightblue');
+              winningComputer.css('background-color', '#385EA3');
               winningComputer.css('height', '600px');
               winningComputer.css('width', '800px');
 
@@ -135,13 +136,14 @@
               winningComputer.append(winningComputerHeader);
               game.destroy()
 
-            } else if (score2keeper === 1) {
+            } else if (score2keeper === 3) {
               var winningHuman = $('<div></div>');
               var createImage = document.createElement('img');
               var getImg = $(createImage).attr('src', pikachu);
               $(winningHuman).append(getImg);
-              var winningHumanHeader = $('<h1>You won!</h1>');
-              winningHuman.css('background-color', 'red');
+              var winningHumanHeader = $('<h1>You&#39;re the winner!</h1>');
+              winningHumanHeader.css('color', '#385EA3');
+              winningHuman.css('background-color', '#FFCA06');
               winningHuman.css('height', '600px');
               winningHuman.css('width', '800px');
               winningHuman.css('width', '800px');
